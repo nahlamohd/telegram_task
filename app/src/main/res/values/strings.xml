@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Telegram Task</string>
+    <string name="tme">t.me/theChane101</string>
+    <string name="info">Info</string>
+    <string name="notification">Notification</string>
+    <string name="search_icon">search icon</string>
+    <string name="channel_name">The Chance</string>
+    <string name="file">File</string>
+    <string name="links">Links</string>
+    <string name="invite_link">Invite Link</string>
+    <string name="on">On</string>
+    <string name="members">Members</string>
+    <string name="media">Media</string>
+</resources>

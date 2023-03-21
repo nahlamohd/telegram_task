@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <View
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expended_img"
+        android:background="@color/blueTelegram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expended_img"
+        android:background="@drawable/the_chance_photo"
+        app:layout_constraintEnd_toEndOf="@+id/app_bar"
+        app:layout_constraintStart_toStartOf="@+id/app_bar"
+        app:layout_constraintTop_toTopOf="@+id/app_bar"
+        android:foreground="#33000000"
+        />
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expended_img"
+        app:layout_constraintEnd_toEndOf="@+id/app_bar"
+        app:layout_constraintStart_toStartOf="@+id/app_bar"
+        app:layout_constraintTop_toTopOf="@id/app_bar"
+        />
+
+
+    <ImageView
+        android:id="@+id/ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"        android:src="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="@+id/app_bar"
+        app:layout_constraintTop_toTopOf="@+id/app_bar" />
+
+    <ImageView
+        android:id="@+id/icon_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:src="@drawable/baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintTop_toTopOf="@id/app_bar" />
+
+    <View
+        android:id="@+id/view_text"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/app_bar"
+        app:layout_constraintEnd_toEndOf="@+id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar" />
+
+    <TextView
+        android:id="@+id/channel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:text="@string/channel_name"
+        android:textColor="#DEFFFFFF"
+        android:textSize="@dimen/large_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <TextView
+        android:id="@+id/channel_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="818 subscribers"
+        android:textColor="#DEFFFFFF"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@+id/channel_name"
+        app:layout_constraintTop_toBottomOf="@+id/channel_name" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backGround"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginTop="@dimen/base_margin"
+                android:text="@string/info"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="22dp"
+                tools:layout_conversion_absoluteWidth="29dp"
+                tools:layout_editor_absoluteX="@dimen/base_margin"
+                tools:layout_editor_absoluteY="340dp" />
+
+            <TextView
+                android:id="@+id/ch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/tme"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subnormal_text_size"
+                app:layout_constraintStart_toStartOf="@+id/info"
+                app:layout_constraintTop_toBottomOf="@+id/info"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="117dp" />
+
+            <TextView
+                android:id="@+id/invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invite_link"
+                android:textColor="@color/subText"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintStart_toStartOf="@+id/ch"
+                app:layout_constraintTop_toBottomOf="@+id/ch"
+                tools:layout_conversion_absoluteHeight="@dimen/base_margin"
+                tools:layout_conversion_absoluteWidth="55dp"
+                tools:layout_editor_absoluteX="@dimen/base_margin"
+                tools:layout_editor_absoluteY="394dp" />
+
+            <ImageView
+                android:id="@+id/qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:src="@drawable/baseline_qr_code_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ch"
+                tools:layout_conversion_absoluteHeight="@dimen/large_margin"
+                tools:layout_conversion_absoluteWidth="@dimen/large_margin" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:background="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/invite"
+                tools:layout_conversion_absoluteHeight="1dp"
+                tools:layout_conversion_absoluteWidth="403dp" />
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin"
+                android:text="@string/notification"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subnormal_text_size"
+                app:layout_constraintStart_toStartOf="@+id/invite"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="72dp" />
+
+            <TextView
+                android:id="@+id/on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on"
+                android:textColor="@color/subText"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintStart_toStartOf="@+id/invite"
+                app:layout_constraintTop_toBottomOf="@+id/notification"
+                tools:layout_conversion_absoluteHeight="@dimen/base_margin"
+                tools:layout_conversion_absoluteWidth="15dp"
+                tools:layout_editor_absoluteX="@dimen/base_margin"
+                tools:layout_editor_absoluteY="450dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:theme="@style/Color1SwitchStyle"
+                tools:layout_conversion_absoluteHeight="4@dimen/normal_margin"
+                tools:layout_conversion_absoluteWidth="4@dimen/normal_margin"
+                />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:background="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Switch"
+                tools:layout_conversion_absoluteHeight="@dimen/normal_margin"
+                tools:layout_conversion_absoluteWidth="411dp" />
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                tools:layout_conversion_absoluteHeight="4@dimen/normal_margin"
+                tools:layout_conversion_absoluteWidth="411dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_media"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/media"
+                    tools:layout_conversion_absoluteHeight="4@dimen/normal_margin"
+                    tools:layout_conversion_absoluteWidth="137dp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="609dp" />
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/file"
+                    tools:layout_conversion_absoluteHeight="4@dimen/normal_margin"
+                    tools:layout_conversion_absoluteWidth="137dp"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="609dp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_Links"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/links"
+                    tools:layout_conversion_absoluteHeight="4@dimen/normal_margin"
+                    tools:layout_conversion_absoluteWidth="137dp"
+                    tools:layout_editor_absoluteX="274dp"
+                    tools:layout_editor_absoluteY="609dp" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="3"
+                android:rowCount="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/media_img_height"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:src="@drawable/danial"
+                    tools:layout_conversion_absoluteHeight="@dimen/media_img_height"
+                    tools:layout_conversion_absoluteWidth="137dp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="665dp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/media_img_height"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:src="@drawable/danial"
+                    tools:layout_conversion_absoluteHeight="@dimen/media_img_height"
+                    tools:layout_conversion_absoluteWidth="137dp"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="665dp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/media_img_height"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:src="@drawable/danial"
+                    tools:layout_conversion_absoluteHeight="@dimen/media_img_height"
+                    tools:layout_conversion_absoluteWidth="137dp"
+                    tools:layout_editor_absoluteX="274dp"
+                    tools:layout_editor_absoluteY="665dp" />
+
+            </GridLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.motion.widget.MotionLayout>
